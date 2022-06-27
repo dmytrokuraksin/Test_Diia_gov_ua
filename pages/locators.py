@@ -13,5 +13,5 @@ class ProductPageLocators():
     NAME_BOOK = (By.CSS_SELECTOR, ".col-sm-6.product_main h1") 
     PRICE_BOOK = (By.CSS_SELECTOR, ".col-sm-6.product_main p")
     VIEW_BASKET = (By.CSS_SELECTOR, ".btn-group .btn-default")
-    PRODUCT_NAME = (By.CSS_SELECTOR, ".basket-items .col-sm-4 a")
-    PRICE = (By.CSS_SELECTOR, ".col-sm-1 .price_color")
+    PRODUCT_NAME = (By.CSS_SELECTOR, "#messages .alert:nth-child(1) strong")
+    PRICE_TOTAL = (By.CSS_SELECTOR, "#messages .alert-info strong")

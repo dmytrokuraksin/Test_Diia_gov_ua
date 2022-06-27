@@ -10,7 +10,9 @@ class ProductPage(BasePage):
     def guest_can_add_product_to_basket(self):
         self.shoud_be_button_basket()
         self.solve_quiz_and_get_code()
+        # time.sleep(5)
         self.product_in_basket_is_right()
+        # time.sleep(5)
 
     def shoud_be_button_basket (self):
         # name_book = self.browser.find_element(*ProductPageLocators.NAME_BOOK).text
@@ -18,20 +20,23 @@ class ProductPage(BasePage):
         button_basket = self.browser.find_element(*ProductPageLocators.BUTTON_BASKET)
         button_basket.click()
 
+
     def product_in_basket_is_right (self):
-        view_basket = self.browser.find_element(*ProductPageLocators.VIEW_BASKET)
-        view_basket.click()
+        # view_basket = self.browser.find_element(*ProductPageLocators.VIEW_BASKET)
+        # view_basket.click()
         self.should_be_right_book()
         self.should_be_right_price()
         # assert "9.99" in self.browser.find_element(*ProductPageLocators.PRICE).text, "Price is not correct"
 
     def should_be_right_book(self):
+        name_book = self.browser.find_element(*ProductPageLocators.NAME_BOOK).text
         product_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
-        return product_name
+        assert product_name == name_book, "Name is dismiss"
 
     def should_be_right_price(self):
-        product_price = self.browser.find_element(*ProductPageLocators.PRICE).text
-        return product_price
+        price_book = self.browser.find_element(*ProductPageLocators.PRICE_BOOK).text
+        product_price = self.browser.find_element(*ProductPageLocators.PRICE_TOTAL).text
+        assert product_price == price_book, "Price is dismiss"
         
 
 

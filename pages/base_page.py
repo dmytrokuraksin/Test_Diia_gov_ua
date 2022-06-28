@@ -4,14 +4,14 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from .locators import BasePageLocators
-from .locators import BasketPageLocators
+from .locators import ProductPageLocators
 import math
 
 class BasePage():
     def __init__(self, browser, url, timeout=10):
         self.browser = browser
         self.url = url
-        #self.browser.implicitly_wait(timeout)
+        self.browser.implicitly_wait(timeout)
 
     def open(self):
         self.browser.get(self.url)
@@ -24,7 +24,7 @@ class BasePage():
         return True
 
     def guest_go_to_basket(self):
-        link = self.browser.find_element(*BasePageLocators.VIEW_BASKET)
+        link = self.browser.find_element(*ProductPageLocators.VIEW_BASKET)
         link.click()
 
     # def solve_quiz_and_get_code(self):

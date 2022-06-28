@@ -23,5 +23,5 @@ class BasePageLocators():
 
 
 class BasketPageLocators():
-    BASKET_IS_EMPTY = (By.CSS_SELECTOR, "#messages .alert:nth-child(3) p")
+    BASKET_IS_EMPTY = (By.CSS_SELECTOR, "#content_inner")
 

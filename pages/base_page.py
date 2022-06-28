@@ -4,6 +4,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from .locators import BasePageLocators
+from .locators import BasketPageLocators
 import math
 
 class BasePage():
@@ -21,6 +22,10 @@ class BasePage():
         except (NoSuchElementException):
             return False
         return True
+
+    def guest_go_to_basket(self):
+        link = self.browser.find_element(*BasePageLocators.VIEW_BASKET)
+        link.click()
 
     # def solve_quiz_and_get_code(self):
     #     alert = self.browser.switch_to.alert

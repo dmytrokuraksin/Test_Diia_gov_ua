@@ -2,6 +2,7 @@ from .Pages.main_page import MainPage
 
 
 class TestMainPage():
+
     def test_guest_can_use_search_form(self, browser):
         link = "https://diia.gov.ua/"
         request = 'реєстрація'

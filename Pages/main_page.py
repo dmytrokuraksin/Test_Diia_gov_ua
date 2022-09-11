@@ -4,8 +4,6 @@ from .locators import MainPageLocators
 
 
 class MainPage(BasePage):
-    def __init__(self, *args, **kwargs):
-        super(MainPage, self).__init__(*args, **kwargs)
 
     def search_info_by_search_form(self, request_data):
         search_input_field = self.browser.find_element(*MainPageLocators.SEARCH_INPUT_FIELD)

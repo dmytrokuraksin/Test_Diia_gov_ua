@@ -5,6 +5,10 @@ class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
-class LoginPageLocators:
+class SearchPageLocators:
+    pass
 
-    LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
+
+
+
+

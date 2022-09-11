@@ -12,6 +12,10 @@ class MainPage(BasePage):
         search_button.click()
         return SearchResultPage(browser=self.browser, url=self.browser.current_url)
 
+
+    def footer_list_item_is_active(self, item):
+        assert item != None
+
     # def test_guest_can_add_product_to_basket(browser):
     #     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
     #     page = ProductPage(browser, link)

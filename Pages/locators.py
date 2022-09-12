@@ -9,6 +9,11 @@ class MainPageLocators:
 class SearchPageLocators:
     pass
 
+class FooterLocators:
+    FACEBOOK_FOOTER_BUTTON = (By.CSS_SELECTOR, '.fa-facebook')
+    TELEGRAM_FOOTER_BUTTON = (By.CSS_SELECTOR, '.fa-telegram')
+    INSTAGRAM_FOOTER_BUTTON = (By.CSS_SELECTOR, '.fa-instagram')
+    VIBER_FOOTER_ICON = (By.CSS_SELECTOR, '.fa-viber')
 
 
 

@@ -66,3 +66,21 @@ class TestFooterElementsMainPage():
         page = MainPage(browser, link)
         page.open()
         page.footer_app_gallery_button_work_correct()
+
+    def test_footer_dev_company_gerb_icon_is_visiable(self, browser):
+        link = "https://diia.gov.ua/"
+        page = MainPage(browser, link)
+        page.open()
+        page.footer_dev_company_gerb_icon_is_visiable()
+
+    def test_footer_dev_company_diia_icon_is_visiable(self, browser):
+        link = "https://diia.gov.ua/"
+        page = MainPage(browser, link)
+        page.open()
+        page.footer_dev_company_diia_icon_is_visiable()
+
+    def test_footer_dev_company_text_is_visiable(self, browser):
+        link = "https://diia.gov.ua/"
+        page = MainPage(browser, link)
+        page.open()
+        page.footer_dev_company_text_is_visiable()

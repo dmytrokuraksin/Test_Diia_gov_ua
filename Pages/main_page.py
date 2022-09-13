@@ -18,17 +18,6 @@ class MainPage(BasePage):
     def footer_list_item_is_active(self, item):
         assert item != None
 
-    # def test_guest_can_add_product_to_basket(browser):
-    #     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
-    #     page = ProductPage(browser, link)
-    #     page.open()
-    #     page.guest_can_add_product_to_basket()
-    #
-    # def message_disappeared_after_adding_product_to_basket(self):
-    #     self.should_be_button_basket()
-    #     assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
-    #          "Success message is presented, but should not be"
-
     def footer_telegram_button_work_correct(self):
         telegram_button = self.browser.find_element(*FooterLocators.TELEGRAM_FOOTER_BUTTON)
         telegram_button.click()
@@ -98,3 +87,12 @@ class MainPage(BasePage):
         time.sleep(5)
         link = self.browser.current_url
         assert 'appgallery.huawei.com' in link, 'App gallery button works incorrect!'
+
+    def footer_dev_company_gerb_icon_is_visiable(self):
+        assert self.is_element_visiable(*FooterLocators.DEV_COMPANY_GERB_ICON), 'Dev company gerb icon is not visiable'
+
+    def footer_dev_company_diia_icon_is_visiable(self):
+        assert self.is_element_visiable(*FooterLocators.DEV_COMPANY_DIIA_ICON), 'Dev company diia icon is not visiable'
+
+    def footer_dev_company_text_is_visiable(self):
+        assert self.is_element_visiable(*FooterLocators.DEV_COMPANY_TEXT), 'Dev company text is not visiable'

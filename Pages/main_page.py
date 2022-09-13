@@ -8,6 +8,15 @@ from .locators import FooterLocators
 
 class MainPage(BasePage):
 
+    def service_button_lead_to_right_page(self, button, param):
+        button.click()
+        time.sleep(4)
+        assert param in self.browser.current_url, 'This is wrong page!'
+
+    def close_cookies_popup(self):
+        close_cookies_window_button = self.browser.find_element(*MainPageLocators.CLOSE_COOKIES_BUTTON)
+        close_cookies_window_button.click()
+
     def search_info_by_search_form(self, request_data):
         search_input_field = self.browser.find_element(*MainPageLocators.SEARCH_INPUT_FIELD)
         search_input_field.send_keys(request_data)

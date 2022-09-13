@@ -13,6 +13,16 @@ class TestMainPage():
         search_page = page.search_info_by_search_form(request)
         search_page.search_result_is_correct()
 
+    @pytest.mark.parametrize('values', ['yerobota', 'pensiyi-pilgi-ta-dopomoga', 'simya', 'licenziyi-ta-dozvoli', 'bezpeka-ta-pravoporyadok', 'transport', 'zemlya-budivnictvo-neruhomist', 'dovidki-ta-vityagi', 'navkolishnye-seredovishche', 'zdorovya', 'dokumenti-ta-gromadyanstvo', 'pidpriyemnictvo'])
+    def test_guest_can_go_to_any_services_page(self, browser, values):
+        link = "https://diia.gov.ua/"
+        page = MainPage(browser, link)
+        page.open()
+        page.close_cookies_popup()
+        service_button = browser.find_element(By.CSS_SELECTOR, f'a.services_item-title[href="/services/categories/gromadyanam/{values}"]')
+        page.service_button_lead_to_right_page(service_button, values)
+
+
 
 class TestFooterElementsMainPage():
 

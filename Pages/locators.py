@@ -19,6 +19,11 @@ class FooterLocators:
     APP_STORE_FOOTER_BUTTON = (By.CSS_SELECTOR, '.store-apple')
     APP_GALLERY_FOOTER_BUTTON = (By.CSS_SELECTOR, '.store-app-gallery')
 
+    DEV_COMPANY_GERB_ICON = (By.CSS_SELECTOR, '.dev-company_icon-gerb')
+    DEV_COMPANY_DIIA_ICON = (By.CSS_SELECTOR, '.dev-company_icon-diya')
+    DEV_COMPANY_TEXT = (By.CSS_SELECTOR, '.dev-company_text')
+
+
 
 
 

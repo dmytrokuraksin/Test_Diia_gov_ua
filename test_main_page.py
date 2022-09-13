@@ -24,6 +24,7 @@ class TestFooterElementsMainPage():
         footer_element = browser.find_element(By.CSS_SELECTOR, f".menu_footer > ul :nth-child({items})")
         page.footer_list_item_is_active(footer_element)
 
+
     def test_footer_telegram_button_active(self, browser):
         link = "https://diia.gov.ua/"
         page = MainPage(browser, link)
@@ -47,3 +48,21 @@ class TestFooterElementsMainPage():
         page = MainPage(browser, link)
         page.open()
         page.footer_facebook_button_work_correct()
+
+    def test_footer_google_play_button_active(self, browser):
+        link = "https://diia.gov.ua/"
+        page = MainPage(browser, link)
+        page.open()
+        page.footer_google_play_market_button_work_correct()
+
+    def test_footer_app_store_button_active(self, browser):
+        link = "https://diia.gov.ua/"
+        page = MainPage(browser, link)
+        page.open()
+        page.footer_app_store_button_work_correct()
+
+    def test_footer_app_gallery_button_active(self, browser):
+        link = "https://diia.gov.ua/"
+        page = MainPage(browser, link)
+        page.open()
+        page.footer_app_gallery_button_work_correct()

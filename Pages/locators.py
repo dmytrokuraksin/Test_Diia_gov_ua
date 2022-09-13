@@ -15,6 +15,11 @@ class FooterLocators:
     INSTAGRAM_FOOTER_BUTTON = (By.CSS_SELECTOR, '.fa-instagram')
     VIBER_FOOTER_ICON = (By.CSS_SELECTOR, '.fa-viber')
 
+    GOOGLE_PLAY_FOOTER_BUTTON = (By.CSS_SELECTOR, '.store-google')
+    APP_STORE_FOOTER_BUTTON = (By.CSS_SELECTOR, '.store-apple')
+    APP_GALLERY_FOOTER_BUTTON = (By.CSS_SELECTOR, '.store-app-gallery')
+
+
 
 
 

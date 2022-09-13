@@ -68,3 +68,33 @@ class MainPage(BasePage):
         time.sleep(5)
         link = self.browser.current_url
         assert 'viber' in link, 'Viber button works incorrect!'
+
+    def footer_app_store_button_work_correct(self):
+        viber_button = self.browser.find_element(*FooterLocators.APP_STORE_FOOTER_BUTTON)
+        viber_button.click()
+        time.sleep(10)
+        new_window = self.browser.window_handles[1]
+        self.browser.switch_to.window(new_window)
+        time.sleep(5)
+        link = self.browser.current_url
+        assert 'apps.apple.com' in link, 'App store button works incorrect!'
+
+    def footer_google_play_market_button_work_correct(self):
+        viber_button = self.browser.find_element(*FooterLocators.GOOGLE_PLAY_FOOTER_BUTTON)
+        viber_button.click()
+        time.sleep(10)
+        new_window = self.browser.window_handles[1]
+        self.browser.switch_to.window(new_window)
+        time.sleep(5)
+        link = self.browser.current_url
+        assert 'play.google.com' in link, 'Google play button works incorrect!'
+
+    def footer_app_gallery_button_work_correct(self):
+        viber_button = self.browser.find_element(*FooterLocators.APP_GALLERY_FOOTER_BUTTON)
+        viber_button.click()
+        time.sleep(10)
+        new_window = self.browser.window_handles[1]
+        self.browser.switch_to.window(new_window)
+        time.sleep(5)
+        link = self.browser.current_url
+        assert 'appgallery.huawei.com' in link, 'App gallery button works incorrect!'

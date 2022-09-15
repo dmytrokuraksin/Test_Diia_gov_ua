@@ -13,7 +13,10 @@ class TestMainPage():
         search_page = page.search_info_by_search_form(request)
         search_page.search_result_is_correct()
 
-    @pytest.mark.parametrize('values', ['yerobota', 'pensiyi-pilgi-ta-dopomoga', 'simya', 'licenziyi-ta-dozvoli', 'bezpeka-ta-pravoporyadok', 'transport', 'zemlya-budivnictvo-neruhomist', 'dovidki-ta-vityagi', 'navkolishnye-seredovishche', 'zdorovya', 'dokumenti-ta-gromadyanstvo', 'pidpriyemnictvo'])
+    @pytest.mark.parametrize('values', ['yerobota', 'pensiyi-pilgi-ta-dopomoga', 'simya', 'licenziyi-ta-dozvoli',
+                                        'bezpeka-ta-pravoporyadok', 'transport', 'zemlya-budivnictvo-neruhomist',
+                                        'dovidki-ta-vityagi', 'navkolishnye-seredovishche', 'zdorovya', 'dokumenti-ta-gromadyanstvo',
+                                        'pidpriyemnictvo'])
     def test_guest_can_go_to_any_services_page(self, browser, values):
         link = "https://diia.gov.ua/"
         page = MainPage(browser, link)
@@ -26,7 +29,7 @@ class TestMainPage():
 
 class TestFooterElementsMainPage():
 
-    @pytest.mark.parametrize('items', [str(x) for x in range(1, 2)])
+    @pytest.mark.parametrize('items', [str(x) for x in range(1, 13)])
     def test_footer_list_items_active(self, browser, items):
         link = "https://diia.gov.ua/"
         page = MainPage(browser, link)

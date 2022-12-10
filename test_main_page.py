@@ -93,6 +93,7 @@ class TestFooterElementsMainPage():
         page.footer_dev_company_diia_icon_is_visiable()
 
     def test_footer_dev_company_text_is_visiable(self, browser):
+        # links in footer must be visible
         link = "https://diia.gov.ua/"
         page = MainPage(browser, link)
         page.open()
